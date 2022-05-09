@@ -83,3 +83,5 @@ if __name__ == '__main__':
         csvpath = arguments["<csv_path>"]
         response = create_from_csv(csvpath)
         logging.debug(response)
+
+    print(response)
