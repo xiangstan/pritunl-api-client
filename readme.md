@@ -18,6 +18,9 @@ pip install -r requirements.txt
 ```
 
 ### Enviroment variables
+
+Create .env file to store envrionment variables under `pritunl_scripts` directory.
+
 | Variable               | Description                                                                                                 | Required | Default                            | Example                                 |
 |------------------------|-------------------------------------------------------------------------------------------------------------|:--------:|------------------------------------|-----------------------------------------|
 | PRITUNL_BASE_URL | The URL from our Pritunl Server |    Yes   | None               | https://mycompany.pritunl.com |

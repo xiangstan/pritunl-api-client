@@ -9,10 +9,13 @@ import base64
 import urllib3
 import hashlib
 import requests
+from dotenv import load_dotenv
 
-BASE_URL = os.environ['PRITUNL_BASE_URL']
-API_TOKEN = os.environ['PRITUNL_API_TOKEN']
-API_SECRET = os.environ['PRITUNL_API_SECRET']
+load_dotenv()
+
+BASE_URL = os.getenv('PRITUNL_BASE_URL')
+API_TOKEN = os.getenv('PRITUNL_API_TOKEN')
+API_SECRET = os.getenv('PRITUNL_API_SECRET')
 
 
 def auth_request(method, path):

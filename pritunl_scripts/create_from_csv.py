@@ -4,7 +4,6 @@ import logging
 from pritunl_scripts.auth import request
 from pritunl_scripts.get_organization import get_organization
 from pritunl_scripts.get_keys import get_key
-from pritunl_scripts.send_keys import mail_sender
 
 """
 
@@ -34,7 +33,5 @@ def create_from_csv(csvpath):
         })
         if create.status_code == 200:
             logging.info('User {} created on pritunl server'.format(i['Username']))
-            get_key(i['Organization'], i['Username'])
-            mail_sender(i['Organization'], i['Username'], i['Email'])
         else:
             return create.status_code

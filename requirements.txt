@@ -3,3 +3,4 @@ requests
 Jinja2
 urllib3
 wget
+python-dotenv
