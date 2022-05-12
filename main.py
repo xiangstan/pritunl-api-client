@@ -4,7 +4,7 @@ Usage:
     main.py (-h | --help)
     main.py --get-oid <org_name> [--debug]
     main.py --get-user <org_name> <user_name> [--debug]
-    main.py --create-user <org_name> <user_name> <user_email> [--debug]
+    main.py --create-user <org_name> <user_name> <user_email> <user_groups> [--debug]
     main.py --delete-user <org_name> <user_name> [--debug]
     main.py --disable-user <org_name> <user_name> [--debug]
     main.py --create-users-from-csv <csv_path> [--debug]
@@ -64,7 +64,8 @@ if __name__ == '__main__':
         organization = arguments["<org_name>"]
         user = arguments["<user_name>"]
         user_email = arguments["<user_email>"]
-        response = create_user(organization, user, user_email)
+        user_group = arguments["<user_groups>"]
+        response = create_user(organization, user, user_email, user_group)
         logging.debug(response)
 
     if arguments['--delete-user']:
